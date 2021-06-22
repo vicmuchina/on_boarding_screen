@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ShoeApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text1">ShoeApp is the safest and fastest way to discover, buy,
+        and sell authentic sneakers,converse,rubbers,slippers,soccer shoes,athletics shoes and many more.</string>
+    <string name="text2">You can buy shoes from any store or individual and also bargain the price.</string>
+    <string name="text3">Also sell shoes by posting them and sell to the highest bidder.</string>
+</resources>
