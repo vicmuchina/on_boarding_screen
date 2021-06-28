@@ -1,11 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<HorizontalScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/select"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/paper">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:nestedScrollingEnabled="true"
     tools:context=".HomeFragment">
 
 
 
-</FrameLayout>
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="5dp"
+         android:onClick="gallery">
+
+         <ImageView
+            android:id="@+id/image_1"
+            android:src="@drawable/nike"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+             android:onClick="gallery"
+            android:layout_height="110dp"/>
+         <ImageView
+             android:id="@+id/image_2"
+             android:src="@drawable/armour"
+             android:layout_width="110dp"
+             android:layout_margin="5dp"
+             android:onClick="gallery"
+             android:layout_height="110dp"/>
+         <ImageView
+             android:id="@+id/image_3"
+             android:src="@drawable/rebook"
+             android:layout_width="110dp"
+             android:layout_margin="5dp"
+             android:onClick="gallery"
+             android:layout_height="110dp"/>
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_4"
+            android:src="@drawable/balance"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_5"
+            android:src="@drawable/puma"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_6"
+            android:src="@drawable/shoecousa"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_7"
+            android:src="@drawable/vans"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_8"
+            android:src="@drawable/adidas"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_9"
+            android:src="@drawable/sneakers"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_10"
+            android:src="@drawable/jordan"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_11"
+            android:src="@drawable/fila"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+        <ImageView
+            android:id="@+id/image_12"
+            android:src="@drawable/conver"
+            android:layout_width="110dp"
+            android:layout_margin="5dp"
+            android:onClick="gallery"
+            android:layout_height="110dp"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+</HorizontalScrollView>
+

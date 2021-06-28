@@ -31,7 +31,7 @@ class FragmentD : Fragment() {
 
         view.button_skip_d.setOnClickListener {
 
-            findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_viewPagerFragment_to_homeActivity)
             onBoardingFinished()
 
         }

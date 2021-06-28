@@ -20,7 +20,7 @@ class SplashFragment : Fragment() {
 
        Handler().postDelayed({
             if (onBoardingFinished()){
-                findNavController().navigate(R.id.action_fragmentA_to_homeFragment)
+                findNavController().navigate(R.id.action_fragmentA_to_homeActivity)
 
             }else{
                 findNavController().navigate(R.id.action_fragmentA_to_viewPagerFragment)
@@ -30,6 +30,8 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.splash_fragment, container, false)
     }
+
+
 
     private fun onBoardingFinished() : Boolean {
         val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)

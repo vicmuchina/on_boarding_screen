@@ -6,4 +6,17 @@
         and sell authentic sneakers,converse,rubbers,slippers,soccer shoes,athletics shoes and many more.</string>
     <string name="text2">You can buy shoes from any store or individual and also bargain the price.</string>
     <string name="text3">Also sell shoes by posting them and sell to the highest bidder.</string>
+    <string-array name="brands">
+        <item>Nike</item>
+        <item>Under Armour</item>
+        <item>new balance</item>
+        <item>Jordan</item>
+        <item>Adidas</item>
+        <item>Puma</item>
+        <item>Skechers</item>
+        <item>Vans "OF THE WALL"</item>
+        <item>Converse</item>
+        <item>Reebok</item>
+        <item>DCSHOECOUSA</item>
+    </string-array>
 </resources>

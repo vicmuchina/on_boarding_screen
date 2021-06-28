@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/seller"
+        android:title="Seller"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_baseline_assignment_ind_24"
+        />
+    <item android:id="@+id/buyer"
+        android:title="Buyer"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_baseline_apartment_24"
+        />
+    <item android:id="@+id/Browse"
+        android:title="Browse"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_baseline_scatter_plot_24"
+        />
+
+</menu>
