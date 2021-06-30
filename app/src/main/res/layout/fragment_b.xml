@@ -24,8 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:fontFamily="sans-serif-condensed"
-        android:paddingLeft="80dp"
-        android:paddingRight="11dp"
+        android:paddingHorizontal="20dp"
         android:text="@string/text1"
         android:textAllCaps="false"
         android:textColor="#fff"
@@ -33,8 +32,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.008"
+        android:gravity="center_horizontal" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -52,7 +53,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toEndOf="@+id/button_next"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0" />
 

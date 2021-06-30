@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.EditText
+import android.widget.ListView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_upload_form.*
 
@@ -55,13 +55,13 @@ class UploadForm : AppCompatActivity() {
         var contactName = contact_name.text.toString()
 
 
-        //instance of Databasehelper class
+        //instance of Database helper class
         val databaseHelper = DatabaseHelper(this)
 
         if(shoeBrand.trim() != "" && retailPrice.trim() != "" && contactName.trim() != ""){
 
             //if its not equal to blank we can write to database
-            val status = databaseHelper.addSellers(sqlLiteModel(shoeBrand = shoeBrand , retailPrice = retailPrice, contactName = contactName ))
+            val status = databaseHelper.addSellers(SqlLiteModel(shoeBrand = shoeBrand , retailPrice = retailPrice, contactName = contactName ))
 
             if(status > -1){
                 Toast.makeText(applicationContext, "Record saved", Toast.LENGTH_LONG).show()
@@ -83,6 +83,38 @@ class UploadForm : AppCompatActivity() {
         }
 
 
+    }
+
+    fun viewdata(view: View){
+        //define instance of database helper class
+
+        val databaseHelper = DatabaseHelper(this)
+
+        //make reference to the view data method
+        val viewData: List<SqlLiteModel> = databaseHelper.viewData()
+
+        //define array variables to store each record detail
+        var arrayBrand = Array<String>(viewData.size){"null"}
+        var arrayPrice = Array<String>(viewData.size){"null"}
+        var arrayContact = Array<String>(viewData.size){"null"}
+
+        var index = 0
+
+        for (e in viewData){
+
+            arrayBrand[index] = e.shoeBrand
+            arrayPrice[index] = e.retailPrice
+            arrayContact[index] = e.contactName
+
+         index++
+        }
+
+        //create details for my adapter and also set the adapter to the list view
+        val myAdapter = SellersListAdapter(this,arrayBrand,arrayPrice,arrayContact)
+
+        val list = findViewById<ListView>(R.id.viewList)
+
+        list.adapter = myAdapter
     }
 
 

@@ -20,29 +20,25 @@
          android:orientation="horizontal"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_marginRight="5dp"
-         android:onClick="gallery">
+         android:layout_marginRight="5dp">
 
          <ImageView
             android:id="@+id/image_1"
             android:src="@drawable/nike"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-             android:onClick="gallery"
             android:layout_height="110dp"/>
          <ImageView
              android:id="@+id/image_2"
              android:src="@drawable/armour"
              android:layout_width="110dp"
              android:layout_margin="5dp"
-             android:onClick="gallery"
              android:layout_height="110dp"/>
          <ImageView
              android:id="@+id/image_3"
              android:src="@drawable/rebook"
              android:layout_width="110dp"
              android:layout_margin="5dp"
-             android:onClick="gallery"
              android:layout_height="110dp"/>
 
      </LinearLayout>
@@ -57,21 +53,18 @@
             android:src="@drawable/balance"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_5"
             android:src="@drawable/puma"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_6"
             android:src="@drawable/shoecousa"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
 
     </LinearLayout>
@@ -86,21 +79,18 @@
             android:src="@drawable/vans"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_8"
             android:src="@drawable/adidas"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_9"
             android:src="@drawable/sneakers"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
 
     </LinearLayout>
@@ -115,21 +105,18 @@
             android:src="@drawable/jordan"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_11"
             android:src="@drawable/fila"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_12"
             android:src="@drawable/conver"
             android:layout_width="110dp"
             android:layout_margin="5dp"
-            android:onClick="gallery"
             android:layout_height="110dp"/>
 
     </LinearLayout>

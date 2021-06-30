@@ -2,8 +2,11 @@ package com.example.shoeapp
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
+import java.util.ArrayList
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
     DATABASE_VERSION) {
@@ -37,7 +40,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     //save data
-    fun addSellers(sqlLiteModel: sqlLiteModel) : Long{
+    fun addSellers(SqlLiteModel: SqlLiteModel) : Long{
 
         //telling the database what to do
         val db = this.writableDatabase
@@ -45,9 +48,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         //define and place content
         val contentValues = ContentValues()
         //put data to the respective fields
-        contentValues.put(KEY_BRAND,sqlLiteModel.shoeBrand)
-        contentValues.put(KEY_PRICE,sqlLiteModel.retailPrice)
-        contentValues.put(KEY_NAME,sqlLiteModel.contactName)
+        contentValues.put(KEY_BRAND,SqlLiteModel.shoeBrand)
+        contentValues.put(KEY_PRICE,SqlLiteModel.retailPrice)
+        contentValues.put(KEY_NAME,SqlLiteModel.contactName)
 
         //query to insert to table users
 
@@ -59,5 +62,63 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     }
 
-    //view data
+    //function to view data
+
+    fun viewData() : List<SqlLiteModel>{
+
+        //get a resizable array
+        val sellerArray : ArrayList<SqlLiteModel> = ArrayList()
+
+        //define our fetch query
+        val selectQuery = "SELECT * FROM $TABLE_SELLERS"
+
+        //define what db should do
+
+        val db = this.writableDatabase
+
+        //reading our data
+        var cursor: Cursor? = null
+
+        //declare a try and catch in case the data is not there
+        //and when the database undergoes an upgrade we need to prevent a crash
+
+        try {
+            cursor = db.rawQuery(selectQuery,null)
+        }
+        catch (e : SQLiteException){
+
+            db.execSQL(selectQuery)
+
+            return ArrayList()
+        }
+        //iterate over the db and store them in our model class
+
+        var userid: String
+        var brand: String
+        var price: String
+        var contact: String
+
+        //using cursor to pick records
+        if(cursor.moveToFirst()){
+
+            //create a do loop
+           do{
+            brand = cursor.getString(cursor.getColumnIndex("brand"))
+            price = cursor.getString(cursor.getColumnIndex("price"))
+            contact = cursor.getString(cursor.getColumnIndex("contact_name"))
+
+            //taking the data to the model class
+
+            val sellers = SqlLiteModel(shoeBrand = brand ,retailPrice = price , contactName = contact)
+
+            sellerArray.add(sellers)
+
+           }while (cursor.moveToNext())
+
+        }
+
+        cursor.close()
+
+        return sellerArray
+    }
 }
