@@ -25,7 +25,7 @@ class SellersListAdapter(private val context: Activity,
         //set the data according to the position
         brand.text ="Shoe Brand: ${brands[position]}"
         price.text = "Retail Price: ${prices[position]} "
-        contact.text = "Contact Name: ${contacts}"
+        contact.text = "Contact Name: ${contacts[position]}"
 
         return rowView
     }

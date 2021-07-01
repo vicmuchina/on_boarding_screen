@@ -24,13 +24,13 @@
 
          <ImageView
             android:id="@+id/image_1"
-            android:src="@drawable/nike"
+            android:src="@drawable/nikes"
             android:layout_width="110dp"
             android:layout_margin="5dp"
             android:layout_height="110dp"/>
          <ImageView
              android:id="@+id/image_2"
-             android:src="@drawable/armour"
+             android:src="@drawable/underarmour"
              android:layout_width="110dp"
              android:layout_margin="5dp"
              android:layout_height="110dp"/>
@@ -62,7 +62,7 @@
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_6"
-            android:src="@drawable/shoecousa"
+            android:src="@drawable/dcshoe"
             android:layout_width="110dp"
             android:layout_margin="5dp"
             android:layout_height="110dp"/>
@@ -76,7 +76,7 @@
 
         <ImageView
             android:id="@+id/image_7"
-            android:src="@drawable/vans"
+            android:src="@drawable/van"
             android:layout_width="110dp"
             android:layout_margin="5dp"
             android:layout_height="110dp"/>
@@ -88,7 +88,7 @@
             android:layout_height="110dp"/>
         <ImageView
             android:id="@+id/image_9"
-            android:src="@drawable/sneakers"
+            android:src="@drawable/sketchers"
             android:layout_width="110dp"
             android:layout_margin="5dp"
             android:layout_height="110dp"/>
