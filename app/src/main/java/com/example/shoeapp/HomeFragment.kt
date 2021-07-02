@@ -34,6 +34,7 @@ class HomeFragment : Fragment() {
 
         button_1.setOnClickListener {
             val intent = Intent(context,ShoeActivity::class.java)
+
             startActivity(intent)
         }
         button_2.setOnClickListener {

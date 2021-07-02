@@ -17,18 +17,21 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.splash_fragment, container, false)
+    }
 
-       Handler().postDelayed({
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Handler().postDelayed({
             if (onBoardingFinished()){
                 findNavController().navigate(R.id.action_fragmentA_to_homeActivity)
 
             }else{
                 findNavController().navigate(R.id.action_fragmentA_to_viewPagerFragment)
             }
-                 }, 3000)
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.splash_fragment, container, false)
+        }, 3000)
     }
 
 
