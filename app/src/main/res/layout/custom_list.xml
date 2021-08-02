@@ -11,7 +11,7 @@
         android:id="@+id/brand"
         android:text="Brand"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_marginLeft="10dp"
         />
     <TextView
@@ -21,7 +21,7 @@
         android:id="@+id/retailPrice"
         android:text="Price"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_marginLeft="10dp"
         />
     <TextView
@@ -31,7 +31,7 @@
         android:id="@+id/contact"
         android:text="Contact"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_marginLeft="10dp"
         />
 </LinearLayout>

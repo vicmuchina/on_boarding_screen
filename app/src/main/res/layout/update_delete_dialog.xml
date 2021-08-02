@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <EditText
+        android:id="@+id/editTextBrand"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Enter brand" />
+
+    <EditText
+        android:id="@+id/editTextPrice"
+        app:layout_constraintTop_toBottomOf="@id/editTextBrand"
+        app:layout_constraintStart_toStartOf="@id/editTextBrand"
+        app:layout_constraintEnd_toEndOf="@id/editTextBrand"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Enter Price" />
+
+    <EditText
+        android:id="@+id/editTextContactName"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextPrice"
+        app:layout_constraintStart_toStartOf="@id/editTextPrice"
+        app:layout_constraintEnd_toEndOf="@id/editTextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Enter Contact Name" />
+
+    <EditText
+        android:id="@+id/editTextContactNumber"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextContactName"
+        app:layout_constraintStart_toStartOf="@id/editTextContactName"
+        app:layout_constraintEnd_toEndOf="@id/editTextContactName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Enter Contact Number" />
+
+    <TextView
+        android:id="@+id/uploadTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to upload the new image"
+        android:textColor="#049F9F"
+        android:textAllCaps="false"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextContactNumber"
+        app:layout_constraintStart_toStartOf="@id/editTextContactNumber"
+        app:layout_constraintEnd_toEndOf="@id/editTextContactNumber"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="32dp"
+        android:gravity="center"
+        android:weightSum="2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/uploadTextView"
+        app:layout_constraintStart_toStartOf="@+id/uploadTextView"
+        app:layout_constraintTop_toBottomOf="@+id/uploadTextView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpdate"
+            android:background="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:text="Update" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/teal_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:text="Delete" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

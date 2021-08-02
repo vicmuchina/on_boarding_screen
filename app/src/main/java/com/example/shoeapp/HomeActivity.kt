@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() ,BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.seller -> {
-                val intent = Intent(applicationContext,UploadForm::class.java)
+                val intent = Intent(applicationContext,Login::class.java)
 
                 startActivity(intent)
             }
